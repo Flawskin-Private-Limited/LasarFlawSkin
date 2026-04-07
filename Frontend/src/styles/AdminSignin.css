@@ -1,0 +1,300 @@
+:root {
+    --color-heading: #0F172A;
+    --color-subtext: #64748B;
+    --color-border: #E2E8F0;
+    --color-btn: #8EC7DF;
+    --color-btn-hover: #7ab5ce;
+    --color-bg-right: #F8FAFC;
+    --color-footer: #94A3B8;
+    --font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    overflow-x: hidden;
+}
+
+.admin-signin-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: var(--font-family);
+    background-color: var(--color-bg-right);
+}
+
+/* Left Panel */
+.left-panel {
+    width: 60%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+
+.left-panel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.left-panel-content {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 5rem;
+    color: #ffffff;
+    width: 100%;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.brand-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.hero-heading {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtext {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 480px;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 40%;
+    height: 100vh;
+    background-color: var(--color-bg-right);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+}
+
+.secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #E0F2FE;
+    color: #38BDF8;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.form-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-heading);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.form-subtext {
+    font-size: 0.95rem;
+    color: var(--color-subtext);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.input-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 0.5rem;
+}
+
+.password-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.forgot-link {
+    font-size: 0.8rem;
+    color: var(--color-btn);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Custom Input Group Styles */
+.custom-input-group {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+}
+
+.input-icon {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: #94A3B8;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.custom-input {
+    border: 1px solid var(--color-border);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    color: var(--color-heading);
+    padding: 0.75rem 1rem 0.75rem 0;
+    height: 48px;
+}
+
+.custom-input:focus {
+    box-shadow: none;
+    border-color: var(--color-border);
+}
+
+.custom-input-middle {
+    border-right: none;
+    border-radius: 0;
+}
+
+.toggle-password {
+    border-left: none;
+    border-right: 1px solid var(--color-border);
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 48px;
+    background-color: var(--color-btn);
+    color: var(--color-heading);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    margin-top: 1.5rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-btn-hover);
+}
+
+/* Create Account Link Additions */
+.create-account-wrapper {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+}
+
+.create-account-text {
+    color: var(--color-subtext);
+}
+
+.create-account-link {
+    color: var(--color-btn);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.create-account-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.footer-section {
+    margin-top: 2.5rem;
+}
+
+.footer-divider {
+    border-top: 1px solid #F1F5F9;
+    margin-bottom: 1.5rem;
+    opacity: 1;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--color-footer);
+    line-height: 1.6;
+}
+
+.footer-copy p {
+    margin-bottom: 0.25rem;
+}
+
+/* Toast Customizations */
+.toast {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 8px;
+}
+
+/* Responsive Constraints */
+@media screen and (max-width: 768px) {
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        width: 100%;
+    }
+
+    .password-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .forgot-link {
+        margin-left: auto;
+    }
+}

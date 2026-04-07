@@ -1,0 +1,613 @@
+/* Feedback.css - Custom styles for Flawskin Feedback Form */
+
+/* Base Styles */
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Split Screen Layout */
+.split-screen {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+/* Left Section - Hero Image - Desktop Only */
+.hero-image-container-feedback {
+  flex: 1.2;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
+   url('../assets/images/laser-clinic-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+  color: white;
+  width: 100%;
+}
+
+/* Dark overlay for better text readability */
+.hero-image-container-feedback::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+  pointer-events: none;
+}
+
+.hero-image-container-feedback > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Right Section - Form Container */
+.form-section {
+  flex: 0.8;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  width: 100%;
+}
+
+.form-container {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Logo and Branding */
+.icon-lg {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+.icon-sm {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Typography */
+.text-flaw-dark {
+  color: #1e293b;
+}
+
+.text-flaw-gray {
+  color: #64748b;
+}
+
+.text-flaw-blue {
+  color: #0ea5e9;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+/* Hero Text */
+.hero-text-feedback {
+  max-width: 500px;
+  width: 100%;
+}
+
+.hero-text-feedback h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word;
+}
+
+.hero-text-feedback p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+}
+
+/* Form Elements */
+.form-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+  display: block;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+}
+
+.input-group-text {
+  border: 1px solid #e2e8f0;
+  border-right: none;
+  background-color: #f8fafc;
+  padding: 0.75rem 1rem;
+  flex-shrink: 0;
+}
+
+.form-control, .form-select {
+  border: 1px solid #e2e8f0;
+  border-left: none;
+  background-color: #f8fafc;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  min-width: 0; /* Prevents flex overflow */
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+  background-color: #ffffff;
+  outline: none;
+}
+
+.form-control-lg, .form-select-lg {
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  flex-shrink: 0;
+}
+
+.star-btn:hover {
+  transform: scale(1.1);
+}
+
+.star-icon {
+  color: #cbd5e1;
+  transition: color 0.2s ease;
+  width: 2rem;
+  height: 2rem;
+}
+
+.star-icon.filled {
+  color: gold;
+  fill: gold;
+}
+
+.star-icon.hovered {
+  color: gold;
+}
+
+/* Textarea */
+textarea.form-control {
+  min-height: 25px;
+  resize: vertical;
+  width: 100%;
+}
+
+/* Buttons */
+.btn-primary-custom {
+  background-color: #0ea5e9;
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
+  width: 100%;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-primary-custom:hover {
+  background-color: #0284c7;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(14, 165, 233, 0.3);
+}
+
+.btn-primary-custom:active {
+  transform: translateY(0);
+}
+
+.btn-primary-custom:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3);
+}
+
+/* Links */
+.hover-underline {
+  position: relative;
+  text-decoration: none;
+  color: #0ea5e9;
+}
+
+.hover-underline:hover {
+  text-decoration: underline !important;
+}
+
+/* Return to Dashboard Link */
+.return-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.return-link:hover {
+  color: #0ea5e9;
+}
+
+.return-link:hover .return-icon {
+  transform: translateX(-4px);
+}
+
+.return-icon {
+  transition: transform 0.2s ease;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Checkbox */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.form-check-input {
+  border-color: #e2e8f0;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.form-check-input:checked {
+  background-color: #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+.form-check-input:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+  outline: none;
+}
+
+.form-check-label {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Footer */
+.footer-text {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Validation Styles */
+.star-rating-container.is-invalid {
+  animation: shake 0.3s ease-in-out;
+}
+
+.star-rating-container.is-invalid .star-btn {
+  filter: drop-shadow(0 0 2px #dc3545);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.valid-feedback.d-block {
+  color: #198754;
+  display: block !important;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+}
+
+.invalid-feedback.d-block {
+  display: block !important;
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.form-text.text-muted {
+  color: #6c757d !important;
+  font-size: 0.875em;
+}
+
+.form-text.text-success {
+  color: #198754 !important;
+  font-size: 0.875em;
+}
+
+/* Animation */
+.form-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop Styles (992px and above) */
+@media (min-width: 992px) {
+  .hero-image-container-feedback {
+    display: flex !important;
+  }
+  
+  .form-section {
+    flex: 0.8;
+  }
+}
+
+/* Mobile Styles (below 992px) */
+@media (max-width: 991px) {
+  .split-screen {
+    flex-direction: column;
+  }
+  
+  /* Hide hero image completely on mobile */
+  .hero-image-container-feedback {
+    display: none !important;
+  }
+  
+  /* Form section takes full width on mobile */
+  .form-section {
+    flex: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    justify-content: flex-start;
+  }
+  
+  .form-container {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+  
+  /* Adjust form header for mobile */
+  .form-container h2 {
+    font-size: 1.75rem;
+  }
+  
+  /* Adjust input groups for better mobile touch */
+  .input-group {
+    flex-wrap: nowrap;
+  }
+  
+  .form-control, .form-select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 0.875rem 0.75rem;
+  }
+  
+  .input-group-text {
+    padding: 0.875rem 0.75rem;
+  }
+  
+  /* Increase touch targets */
+  .star-btn {
+    padding: 0.25rem;
+  }
+  
+  .star-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  
+  .form-check-input {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .btn-primary-custom {
+    padding: 1.125rem;
+    font-size: 1.125rem;
+  }
+  
+  .return-link {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .footer-text {
+    margin-top: 2.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Small mobile devices (below 576px) */
+@media (max-width: 576px) {
+  .form-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .form-container {
+    padding: 0.5rem 0;
+  }
+  
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .star-rating {
+    gap: 0.25rem;
+  }
+  
+  .star-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .input-group-text {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .form-control, .form-select {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .btn-primary-custom {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Very small mobile devices (below 375px) */
+@media (max-width: 375px) {
+  .form-section {
+    padding: 1rem 0.75rem;
+  }
+  
+  .star-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .input-group-text {
+    padding: 0.75rem 0.4rem;
+  }
+  
+  .input-group-text .icon-sm {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* Height-based media queries for better vertical spacing */
+@media (max-height: 700px) {
+  .form-section {
+    padding: 1.5rem;
+    justify-content: flex-start;
+  }
+  
+  .form-container {
+    padding: 0.5rem 0;
+  }
+  
+  .footer-text {
+    margin-top: 1.5rem;
+  }
+  
+  textarea.form-control {
+    min-height: 100px;
+  }
+}
+
+@media (max-height: 600px) {
+  .form-section {
+    padding: 1rem;
+  }
+  
+  .form-container {
+    padding: 0.25rem 0;
+  }
+  
+  .footer-text {
+    margin-top: 1rem;
+  }
+  
+  textarea.form-control {
+    min-height: 80px;
+  }
+}
+
+/* Utilities */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-flaw-blue {
+  background-color: #0ea5e9;
+}
+
+.hover-bg-sky:hover {
+  background-color: #0284c7;
+}
+
+.border-flaw-border {
+  border-color: #e2e8f0;
+}
+
+/* Ensure proper spacing for form groups */
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+/* Ensure text doesn't overflow */
+small, .small {
+  font-size: 0.875rem;
+  word-wrap: break-word;
+}
